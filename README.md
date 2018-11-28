@@ -84,6 +84,27 @@ you use the published checksums to verify integrity.
    $ open $(vault read -field=url auth/google/code_url)
    $ vault write auth/google/login code=$GOOGLE_CODE role=hello
    ```
+## Config
+
+The plugin has some parameters to control its behavior.  
+These are:
+
+| Key | Description | Default | 
+| --- | --- | --- |
+| allowed_domains | List of allowed domains | ```<nil>``` | 
+| allowed_groups | List of allowed groups, required ```directory_impersonate_user``` and ```directory_service_account_key```? | ```<nil>``` | 
+| allowed_users | List of allowed mail-addresses? | ```<nil>``` | 
+| cli_client_id | Google application ID for CLI oauth2 | | 
+| cli_client_secret | Google application secret for CLI oauth2| | 
+| cli_max_ttl | Maximum duration after which CLI authentication will be expired | 0s | 
+| cli_ttl | Duration after which CLI authentication will be expired | 0s | 
+| directory_impersonate_user | Google Admin User to Impersonate for Directory Group lookups | | 
+| directory_service_account_key | Google Service Account for Directory Group lookups | | 
+| web_client_id | Google application ID for Web oauth2 | | 
+| web_client_secret | Google application secret for Web oauth2 | | 
+| web_max_ttl | Maximum duration after web which authentication will be expired | 0s | 
+| web_redirect_url | Google redirect URL for Web oauth2 | | 
+| web_ttl | Duration after which web authentication will be expired | 0s | 
 
 ## Notes
 
