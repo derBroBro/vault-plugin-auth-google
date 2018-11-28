@@ -37,6 +37,8 @@ you use the published checksums to verify integrity.
 
 1. Create an OAuth client ID in [the Google Cloud Console](https://console.cloud.google.com/apis/credentials), of type "Other".
 
+   The "Authorized redirect URIs" should be ```https://<vault-url>/ui/vault/auth/google/callback/google```
+
 1. Configure the auth method:
 
    ```sh
